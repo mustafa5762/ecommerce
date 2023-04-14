@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ppmori';
+    src: url('fonts/PPMori-Variable-ZDOEFJXU.woff2');
+}
+body {
+    font-family: 'ppmori';
+}
+.custom-grid-gap {
+    gap: 60px 20px;
+}
