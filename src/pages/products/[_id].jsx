@@ -61,7 +61,7 @@ function ProductDetail() {
                     <div className="mt-4">
                       <div className="text-neutral-800 text-2xl font-medium">£ {data[1].price}</div>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-4">
                       <p className="text-neutral-700 leading-relaxed tracking-wide text-sm lg:text-base">
                         Join the witches of the Coven and their cause to raise the Old Gods back to their thrones with the Coven Hoodie.
                       </p>
@@ -69,9 +69,9 @@ function ProductDetail() {
 
                     <div className="inline-flex items-center mt-8 border border-neutral-500 w-auto rounded-sm">
                       <div className="w-12 h-10 bg-neutral-800 text-neutral-50 flex justify-center items-center">S</div>
-                      <div className="w-12 h-10 border-r border-neutral-500 text-neutral-800 flex justify-center items-center">M</div>
-                      <div className="w-12 h-10 border-r border-neutral-500 text-neutral-800 flex justify-center items-center">L</div>
-                      <div className="w-12 h-10 text-neutral-800 flex justify-center items-center">C</div>
+                      <div className="w-12 bg-white h-10 border-r border-neutral-500 text-neutral-800 flex justify-center items-center">M</div>
+                      <div className="w-12 bg-white h-10 border-r border-neutral-500 text-neutral-800 flex justify-center items-center">L</div>
+                      <div className="w-12 bg-white h-10 text-neutral-800 flex justify-center items-center">C</div>
                     </div>
 
                     <div className="mt-10 flex items-center justify-between">
@@ -83,7 +83,6 @@ function ProductDetail() {
                       </div>
                       <div className="text-neutral-600 text-sm uppercase tracking-wide">Green</div>
                     </div>
-
                     <button className="bg-neutral-800 hover:bg-neutral-700 transition-all transition-300 text-neutral-100 py-4 rounded-full mt-10 uppercase text-sm font-semibold w-full">£ 40  -  Add to bag</button>
                 </div>
             </div>
