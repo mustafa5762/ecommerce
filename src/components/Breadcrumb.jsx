@@ -8,7 +8,7 @@ function Breadcrumb({label}) {
     <li className="inline-flex items-center">
       <a
         href="#"
-        className="inline-flex items-center font-medium text-neutral-700 hover:text-blue-600"
+        className="inline-flex items-center font-medium text-neutral-700 hover:text-blue-600 text-sm"
       >
         <svg
           aria-hidden="true"
@@ -39,7 +39,7 @@ function Breadcrumb({label}) {
         </svg>
         <a
           href="#"
-          className="ml-1 text-s font-medium text-neutral-700 hover:text-blue-600 md:ml-2"
+          className="ml-1 text-sm font-medium text-neutral-700 hover:text-blue-600 md:ml-2"
         >
           Projects
         </a>
@@ -60,7 +60,7 @@ function Breadcrumb({label}) {
             clipRule="evenodd"
           />
         </svg>
-        <span className="ml-1 textsm font-medium text-neutral-700 md:ml-2">
+        <span className="ml-1 text-sm font-medium text-neutral-700 md:ml-2">
           {label}
         </span>
       </div>
