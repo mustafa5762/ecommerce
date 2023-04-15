@@ -36,9 +36,9 @@ function ProductDetail() {
                 
 
                 <div className='lg:w-2/6 lg:pl-8 mt-8 lg:mt-0'>
-                    <h1 className="text-3xl font-bold text-neutral-800 uppercase">{data[0].title}</h1>
+                    <h1 className="text-3xl font-bold text-neutral-950 uppercase">{data[0].title}</h1>
                     <div className="mt-4">
-                      <div className="text-neutral-800 text-2xl font-medium">£ {data[0].price}</div>
+                      <div className="text-neutral-950 text-xl font-medium">£ {data[0].price}</div>
                     </div>
                     <div className="mt-4">
                       <p className="text-neutral-700 leading-relaxed tracking-wide text-sm lg:text-base">
@@ -49,26 +49,26 @@ function ProductDetail() {
                     <div className="inline-flex items-center mt-8 border border-neutral-400 w-auto rounded-sm">
                       {
                         data[0].sizes.map(size =>
-                          <div onClick={() => setselectedSize(size)} className={`cursor-pointer tt text-sm w-14 h-11 border-r border-neutral-400 flex justify-center items-center ${selectedSize.full === size.full ? 'bg-neutral-800 text-neutral-50' : 'bg-white text-neutral-800'}`}>{size.name}</div>  
+                          <div onClick={() => setselectedSize(size)} className={`cursor-pointer tt text-sm w-12 h-10 border-r border-neutral-400 flex justify-center items-center ${selectedSize.full === size.full ? 'bg-neutral-800 text-neutral-50' : 'bg-white text-neutral-800'}`}>{size.name}</div>  
                         )
                       }
                     </div>
 
                     <div className="mt-10 flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-3">
                         {
                           data[0].colors.map(color =>
-                            <div onClick={() => setselectedColor(color)} className={`${color.class} w-8 h-8 rounded-full tt ${selectedColor.name === color.name && " ring-2 ring-neutral-800 ring-offset-2" }`}></div>
+                            <div onClick={() => setselectedColor(color)} className={`${color.class} w-6 h-6 rounded-full tt ${selectedColor.name === color.name && " ring-2 ring-neutral-800 ring-offset-2" }`}></div>
                           )
                         }
                       </div>
                       <div className="text-neutral-600 text-sm uppercase tracking-wide">{selectedColor.name}</div>
                     </div>
-                    <div className="mt-10 flex items-center space-x-8">
+                    <div className="mt-10 flex items-center space-x-5">
                       <div className="text-neutral-700">
                         <ShareIcon className='w-6 h-6'/>
                       </div>
-                      <button className="bg-neutral-800 hover:bg-neutral-700 transition-all transition-300 text-neutral-100 py-4 rounded-full uppercase text-sm font-semibold w-full">£ 40  -  Add to bag</button>
+                      <button className="bg-neutral-800 hover:bg-neutral-700 transition-all transition-300 text-neutral-100 py-3 rounded-full uppercase text-sm font-semibold w-full">£ 40  -  Add to bag</button>
                     </div>
                 </div>
             </div>
