@@ -8,9 +8,9 @@ function Accordian(props) {
 
   return (
     <div>
-        <div className="border-t border-b border-neutral-300 px-4 oveflow-hidden">
+        <div className="border-t border-neutral-300 px-4 oveflow-hidden">
             <div className="flex justify-between items-center py-4">
-                <div className="text-neutral-800 font-medium tracking-wide">
+                <div className="text-neutral-800 text-sm font-bold tracking-wide">
                     {props.label}
                 </div>
                 <div onClick={() => setopen(!open)} className="text-neutral-700">
@@ -20,7 +20,7 @@ function Accordian(props) {
             <AnimatePresence>
             {
                 open &&
-                <motion.p initial={{height:0}} animate={{height:'auto'}} exit={{height:0}} transition={{duration:0.3,ease:[0.16, 1, 0.3, 1]}} className="text-neutral-700 leading-relaxed overflow-clip mb-4 tracking-wide">
+                <motion.p initial={{height:0}} animate={{height:'auto'}} exit={{height:0}} transition={{duration:0.3,ease:[0.16, 1, 0.3, 1]}} className="text-neutral-700 leading-relaxed overflow-clip mb-4 tracking-wide text-sm">
                     {props.children}
                 </motion.p>
             }
