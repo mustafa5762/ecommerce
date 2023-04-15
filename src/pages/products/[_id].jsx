@@ -25,23 +25,22 @@ function ProductDetail() {
 
         <div className="py-20 px-3 lg:px-10">
             
-            <div className="lg:flex">
-              <div className="flex-1 flex">
-                <div>
-                  <img src={data[0].image} alt="" />
-                </div>
-                <div>
-                  <img src={data[0].image} alt="" />
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-0 lg:gap-x-10">
+              <div>
+                <img src={data[0].image} alt="" />
               </div>
-              <div className='lg:pl-10 pt-4 lg:pt-0'>
-                <div className="text-sm mb-6 mt-3 opacity-75">New</div>
-                <div className="font-semibold text-3xl uppercase">manors LOGO T-SHIRT</div>
-                <div className="mt-4 text-xl font-semibold">£40</div>
+              <div>
+                <img src={data[0].image} alt="" />
+              </div>
+
+              <div>
+                <div className="text-sm mb-6 mt-3 text-neutral-600">New</div>
+                <div className="font-semibold text-3xl uppercase text-neutral-900">manors LOGO T-SHIRT</div>
+                <div className="mt-4 text-xl font-semibold text-neutral-800">£40</div>
 
                 <div className="mt-8 inline-flex border border-black bg-white rounded-sm">
                   {data[0].sizes.map(size =>
-                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-black pt-0.5 text-sm ${selectedSize.full === size.full && "bg-black text-white"}`}>{size.name}</div>  
+                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-black pt-0.5 text-sm text-neutral-800 ${selectedSize.full === size.full && "bg-black text-white"}`}>{size.name}</div>  
                   )}
                 </div>
 
@@ -51,11 +50,11 @@ function ProductDetail() {
                       <div onClick={() => setselectedColor(color)} className={`h-6 w-6 tt rounded-full ${color.class} ${selectedColor.name === color.name && "ring-1 ring-black ring-offset-1"}`}></div>
                     )}
                   </div>
-                  <div className="uppercase opacity-75 text-sm">{selectedColor.name}</div>
+                  <div className="uppercase text-neutral-600 text-sm">{selectedColor.name}</div>
                 </div>
 
                 <div className="mt-10">
-                  <button className="w-full bg-custom text-white text-sm uppercase py-4 font-semibold rounded-full hover:opacity-90 tt">£40 - add to bag</button>
+                  <button className="w-full bg-neutral-800 text-white text-sm uppercase py-4 font-semibold rounded-full hover:bg-neutral-900 tt">£40 - add to bag</button>
                 </div>
 
               </div>
