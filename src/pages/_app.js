@@ -1,7 +1,8 @@
 import '@/styles/globals.css'
 import  { ReactLenis } from '@studio-freight/react-lenis'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { CartProvider } from "react-use-cart";
 
 export default function App({ Component, pageProps }) {
 
@@ -10,7 +11,9 @@ export default function App({ Component, pageProps }) {
   return (
     <AnimatePresence mode='wait'>
       <div key={router.route}>
-           <Component {...pageProps} />
+        <CartProvider>
+          <Component {...pageProps} />
+        </CartProvider>
       </div>
     </AnimatePresence>)
 }

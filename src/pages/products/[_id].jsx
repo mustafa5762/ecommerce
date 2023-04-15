@@ -1,8 +1,6 @@
 import Layout from '@/components/Layout/Layout'
 import React, { useState } from 'react'
-import {ShareIcon} from '@heroicons/react/24/solid'
-import Breadcrumb from '@/components/Breadcrumb'
-import Rating from '@/components/Rating'
+import { useCart } from "react-use-cart";
 
 const data = [
   {
@@ -20,12 +18,28 @@ function ProductDetail() {
 
   const [selectedColor, setselectedColor] = useState(data[0].colors[0])
   const [selectedSize, setselectedSize] = useState(data[0].sizes[0])
+
+  const { addItem, items, inCart } = useCart();
+
+  const addToCart = () => {
+    addItem({
+      id: data[0].id,
+      title: data[0].title,
+      price: data[0].price,
+      size: selectedSize,
+      color: selectedColor,
+      image: data[0].image
+    })
+
+    console.log(items)
+  }
+
   return (
     <Layout>
 
         <div className="py-20 px-3 lg:px-10">
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-0 lg:gap-x-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-0 lg:gap-x-10 gap-y-10 lg:gap-y-0">
               <div>
                 <img src={data[0].image} alt="" />
               </div>
@@ -56,7 +70,7 @@ function ProductDetail() {
                 </div>
 
                 <div className="mt-10">
-                  <button className="w-full bg-neutral-800 text-white text-sm uppercase py-3 font-semibold rounded-full hover:bg-neutral-900 tt">£40 - add to bag</button>
+                  <button onClick={addToCart} className="w-full bg-neutral-800 text-white text-sm uppercase py-3 font-semibold rounded-full hover:bg-neutral-900 tt">{inCart(data[0].id) ? "In cart" : "£40 - add to bag"}</button>
                 </div>
 
               </div>
