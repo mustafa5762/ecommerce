@@ -40,7 +40,7 @@ function Categorypage() {
   return (
     <>
         <Layout>
-            <div className="grid grid-cols-2 lg:grid-cols-4 px-2 lg:px-10 mt-10 custom-grid-gap">
+            <div className="grid grid-cols-2 lg:grid-cols-4 px-2 lg:px-10 mt-10 gap-x-3 lg:gap-x-6 gap-y-6">
               {data?.map(product => <ProductCard product={product}/>)}
             </div>
         </Layout>

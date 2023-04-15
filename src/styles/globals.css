@@ -8,9 +8,11 @@
 }
 body {
     font-family: 'ppmori';
+    background-color: #F3F3F1;
+    color: #1D1D1B;
 }
-.custom-grid-gap {
-    gap: 30px 10px;
+.bg-custom {
+    background-color: #1D1D1B;
 }
 .tt {
     transition: 0.3s;

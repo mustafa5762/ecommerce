@@ -9,7 +9,7 @@ const data = [
     id: 1,
     title: "Eighteen Tee",
     price: 40,
-    sizes: [{name: 'XS',full:'Extra-Small'},{name: 'S',full:'Small'},{name: 'M',full:'Medium'},{name: 'L',full:'Large'},],
+    sizes: [{name: 'XS',full:'Extra-Small'},{name: 'S',full:'Small'},{name: 'M',full:'Medium'},{name: 'L',full:'Large'},{name: 'XL',full:'Extra-Large'},{name: 'XXL',full:'Double-Extra-Large'}],
     colors: [{name: 'white', class: 'bg-neutral-300'},{name: 'black', class: 'bg-neutral-800'},{name: 'green', class: 'bg-lime-900'},{name: 'red', class: 'bg-amber-800'}],
     image: 'https://cdn.shopify.com/s/files/1/0713/1693/0869/products/EighteenT-Shirt_WHITE__FRONT.jpg?v=1679484481'
   },
@@ -25,21 +25,39 @@ function ProductDetail() {
 
         <div className="py-20 px-3 lg:px-10">
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 space-y-10 lg:space-x-10">
-              <div>
-                <img src={data[0].image} alt="" />
-              </div>
-              <div>
-                <img src={data[0].image} alt="" />
-              </div>
-              <div>
-                <div className="uppercase text-3xl font-bold text-neutral-900">Gray running sneakers</div>
-                <div className="mt-3">
-                  <div className="text-2xl font-semibold text-neutral-800">£ 59.99</div>
+            <div className="lg:flex">
+              <div className="flex-1 flex">
+                <div>
+                  <img src={data[0].image} alt="" />
                 </div>
-                <p className="text-neutral-700 tracking-wide mt-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque quas accusamus, amet ipsam illum ad optio est quaerat fuga odit!
-                </p>
+                <div>
+                  <img src={data[0].image} alt="" />
+                </div>
+              </div>
+              <div className='lg:pl-10 pt-4 lg:pt-0'>
+                <div className="text-sm mb-6 mt-3 opacity-75">New</div>
+                <div className="font-semibold text-3xl uppercase">manors LOGO T-SHIRT</div>
+                <div className="mt-4 text-xl font-semibold">£40</div>
+
+                <div className="mt-8 inline-flex border border-black bg-white rounded-sm">
+                  {data[0].sizes.map(size =>
+                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-black pt-0.5 text-sm ${selectedSize.full === size.full && "bg-black text-white"}`}>{size.name}</div>  
+                  )}
+                </div>
+
+                <div className="flex justify-between items-center mt-10">
+                  <div className="flex gap-2">
+                    {data[0].colors.map(color => 
+                      <div onClick={() => setselectedColor(color)} className={`h-6 w-6 tt rounded-full ${color.class} ${selectedColor.name === color.name && "ring-1 ring-black ring-offset-1"}`}></div>
+                    )}
+                  </div>
+                  <div className="uppercase opacity-75 text-sm">{selectedColor.name}</div>
+                </div>
+
+                <div className="mt-10">
+                  <button className="w-full bg-custom text-white text-sm uppercase py-4 font-semibold rounded-full hover:opacity-90 tt">£40 - add to bag</button>
+                </div>
+
               </div>
             </div>
         </div>
