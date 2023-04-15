@@ -34,15 +34,17 @@ function ProductDetail() {
               </div>
 
               <div>
-                <div className="text-sm mb-6 mt-3 text-neutral-600">New</div>
-                <div className="font-semibold text-3xl uppercase text-neutral-900">manors LOGO T-SHIRT</div>
-                <div className="mt-4 text-xl font-semibold text-neutral-800">£40</div>
+                <div className="text-sm mb-6 mt-3 text-neutral-600 tracking-wide">Gaming T-Shirts</div>
+                <div className="font-bold text-3xl uppercase text-neutral-900">manors LOGO T-SHIRT</div>
+                <div className="mt-4 text-2xl font-medium text-neutral-800">£40</div>
 
-                <div className="mt-8 inline-flex border border-black bg-white rounded-sm">
+                <p className="text-sm tracking-wide mt-6 text-neutral-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni labore quisquam numquam! Ut totam quas, suscipit atque itaque provident consequuntur?</p>
+
+                {<div className="mt-8 inline-flex border border-neutral-300 bg-white rounded-sm">
                   {data[0].sizes.map(size =>
-                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-black pt-0.5 text-sm text-neutral-800 ${selectedSize.full === size.full && "bg-black text-white"}`}>{size.name}</div>  
+                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-neutral-300 pt-0.5 text-sm text-neutral-800 ${selectedSize.full === size.full && "bg-neutral-800 text-white"}`}>{size.name}</div>  
                   )}
-                </div>
+                  </div>}
 
                 <div className="flex justify-between items-center mt-10">
                   <div className="flex gap-2">
@@ -50,11 +52,11 @@ function ProductDetail() {
                       <div onClick={() => setselectedColor(color)} className={`h-6 w-6 tt rounded-full ${color.class} ${selectedColor.name === color.name && "ring-1 ring-black ring-offset-1"}`}></div>
                     )}
                   </div>
-                  <div className="uppercase text-neutral-600 text-sm">{selectedColor.name}</div>
+                  <div className="capitalize text-neutral-600 text-sm">{selectedColor.name}</div>
                 </div>
 
                 <div className="mt-10">
-                  <button className="w-full bg-neutral-800 text-white text-sm uppercase py-4 font-semibold rounded-full hover:bg-neutral-900 tt">£40 - add to bag</button>
+                  <button className="w-full bg-neutral-800 text-white text-sm uppercase py-3 font-semibold rounded-full hover:bg-neutral-900 tt">£40 - add to bag</button>
                 </div>
 
               </div>
