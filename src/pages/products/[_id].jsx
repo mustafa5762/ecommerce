@@ -48,29 +48,29 @@ function ProductDetail() {
               </div>
 
               <div>
-                <div className="text-sm mb-6 mt-3 text-slate-600 tracking-wide">Gaming T-Shirts</div>
-                <div className="font-bold text-3xl uppercase text-slate-900">manors LOGO T-SHIRT</div>
-                <div className="mt-4 text-2xl font-medium text-slate-800">£40</div>
+                <div className="text-sm mb-6 text-stone-500 tracking-wide">New</div>
+                <div className="font-bold text-3xl uppercase text-stone-900">manors LOGO T-SHIRT</div>
+                <div className="mt-3 text-xl font-semibold text-stone-900">£40</div>
 
-                <p className="text-sm tracking-wide mt-6 text-slate-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni labore quisquam numquam! Ut totam quas, suscipit atque itaque provident consequuntur?</p>
+                <p className="text-sm tracking-wide mt-5 text-stone-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni labore quisquam numquam! Ut totam quas, suscipit atque itaque provident consequuntur?</p>
 
-                {<div className="mt-8 inline-flex border border-slate-300 bg-white rounded-sm">
+                {<div className="mt-6 inline-flex border border-stone-400 bg-white rounded-sm">
                   {data[0].sizes.map(size =>
-                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-slate-300 pt-0.5 text-sm ${selectedSize.full === size.full ? "bg-slate-900 text-white" : "text-slate-800"}`}>{size.name}</div>  
+                    <div onClick={() => setselectedSize(size)} className={`h-9 w-14 tt cursor-pointer flex items-center justify-center overflow-hidden border-r border-stone-400 pt-0.5 text-sm ${selectedSize.full === size.full ? "bg-stone-900 text-white" : "text-slate-800"}`}>{size.name}</div>  
                   )}
                   </div>}
 
-                <div className="flex justify-between items-center mt-10">
+                <div className="flex justify-between items-center mt-8">
                   <div className="flex gap-2">
                     {data[0].colors.map(color => 
-                      <div onClick={() => setselectedColor(color)} className={`h-6 w-6 tt rounded-full ${color.class} ${selectedColor.name === color.name && "ring-1 ring-slate-900 ring-offset-1"}`}></div>
+                      <div onClick={() => setselectedColor(color)} className={`h-6 w-6 tt rounded-full ${color.class} ${selectedColor.name === color.name && "ring-1 ring-stone-800 ring-offset-1"}`}></div>
                     )}
                   </div>
-                  <div className="capitalize text-slate-600 text-sm">{selectedColor.name}</div>
+                  <div className="capitalize text-stone-600 text-sm">{selectedColor.name}</div>
                 </div>
 
-                <div className="mt-10">
-                  <button onClick={addToCart} className="w-full bg-slate-900 text-white text-sm uppercase py-3 font-semibold rounded-full hover:bg-slate-800 tt">{inCart(data[0].id) ? "In cart" : "£40 - add to bag"}</button>
+                <div className="mt-8">
+                  <button onClick={addToCart} className="w-full bg-stone-800 text-white text-sm uppercase py-3 px-8 font-semibold rounded-full hover:bg-stone-900 tt">{inCart(data[0].id) ? "In cart" : "£40 - add to bag"}</button>
                 </div>
 
               </div>
